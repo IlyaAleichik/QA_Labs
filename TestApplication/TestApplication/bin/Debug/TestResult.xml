@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="F:\9-10\TestApplication\TestApplication\bin\Debug\Tests.dll" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-04-28" time="13:01:39">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="408-10" user="Админ" user-domain="408-10" />
+  <culture-info current-culture="ru-RU" current-uiculture="ru-RU" />
+  <test-suite type="Assembly" name="F:\9-10\TestApplication\TestApplication\bin\Debug\Tests.dll" executed="True" result="Success" success="True" time="0.135" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.119" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="MatrixTests" executed="True" result="Success" success="True" time="0.117" asserts="0">
+            <results>
+              <test-case name="Tests.MatrixTests.Check_5to5_Matrix_Values_25to1" executed="True" result="Success" success="True" time="0.080" asserts="3" />
+              <test-case name="Tests.MatrixTests.Check_7to7_Matrix_Values_0to48" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

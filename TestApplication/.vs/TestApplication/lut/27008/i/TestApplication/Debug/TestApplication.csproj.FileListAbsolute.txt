@@ -1,0 +1,8 @@
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\TestApplication\bin\Debug\TestApplication.exe.config
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\TestApplication\bin\Debug\TestApplication.exe
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\TestApplication\bin\Debug\TestApplication.pdb
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\TestApplication\Debug\TestApplication.csprojResolveAssemblyReference.cache
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\TestApplication\Debug\TestApplication.csproj.CoreCompileInputs.cache
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\TestApplication\Debug\TestApplication.csproj.CopyComplete
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\TestApplication\Debug\TestApplication.exe
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\TestApplication\Debug\TestApplication.pdb

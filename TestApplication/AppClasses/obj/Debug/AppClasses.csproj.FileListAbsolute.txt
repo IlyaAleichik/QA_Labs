@@ -1,0 +1,15 @@
+D:\TestApplication\AppClasses\bin\Debug\AppClasses.dll
+D:\TestApplication\AppClasses\bin\Debug\AppClasses.pdb
+D:\TestApplication\AppClasses\obj\Debug\AppClasses.dll
+D:\TestApplication\AppClasses\obj\Debug\AppClasses.pdb
+G:\9-10\TestApplication\AppClasses\bin\Debug\AppClasses.dll
+G:\9-10\TestApplication\AppClasses\bin\Debug\AppClasses.pdb
+G:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.csprojResolveAssemblyReference.cache
+G:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.csproj.CoreCompileInputs.cache
+G:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.dll
+G:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.pdb
+F:\9-10\TestApplication\AppClasses\bin\Debug\AppClasses.dll
+F:\9-10\TestApplication\AppClasses\bin\Debug\AppClasses.pdb
+F:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.csprojResolveAssemblyReference.cache
+F:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.dll
+F:\9-10\TestApplication\AppClasses\obj\Debug\AppClasses.pdb

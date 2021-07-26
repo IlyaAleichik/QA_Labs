@@ -1,0 +1,10 @@
+http://epicentrik.info/
+ * http://newtours.demoaut.com/ не менее 10 тест кейсов и баг репорты к каждому сайту 
+http://www.exambusiness.com/
+
+online QA курс от автора "Тестирование дот ком":
+
+URL учебника:  www.qatutor.com
+
+URL тренировочного сайта: * www.sharelane.com 
+(прошу учесть, что нужно взять учебник и используя его уже работать с 		sharelane.com).

@@ -1,0 +1,7 @@
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\AppClasses\bin\Debug\AppClasses.dll
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\AppClasses\bin\Debug\AppClasses.pdb
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\AppClasses\Debug\AppClasses.csprojResolveAssemblyReference.cache
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\AppClasses\Debug\AppClasses.csproj.CoreCompileInputs.cache
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\AppClasses\Debug\AppClasses.csproj.CopyComplete
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\AppClasses\Debug\AppClasses.dll
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\AppClasses\Debug\AppClasses.pdb

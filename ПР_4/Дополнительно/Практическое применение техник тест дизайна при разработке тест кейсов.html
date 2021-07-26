@@ -1,0 +1,858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)http://protesting.ru/testing/testdesign_practice.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Про Тестинг - Тестирование - Практическое применение техник тест дизайна при разработке тест кейсов</title>
+    
+    <meta content="практика техники тест дизайн кейсы шаблоны примеры анализ требования данные позитивный негативный all pairs pairwise Orthogonal Arrays Testing" name="Keywords">
+    <meta content="Тест дизайн. Практическое применение техник тест дизайна при разработке тест кейсов" name="Description">
+    <meta content="all" name="robots">
+    <meta content="General" name="rating">
+    <meta content="GLOBAL" name="distribution">
+    <meta content="Testing" name="Classification">
+    <meta content="no-cache" http-equiv="Pragma">
+    <meta content="1" http-equiv="Expires">
+    <meta content="Alexey Bulat" name="author">
+    <meta name="verify-v1" content="nwLyVjttOGfRojFpAPHmfd1PBGuIk53xCahRkVSccxY=">
+    <link rel="stylesheet" href="./Практическое применение техник тест дизайна при разработке тест кейсов_files/protesting.css" type="text/css" media="screen">
+    <link rel="shortcut icon" href="http://protesting.ru/img/protesting_znak.ico">
+    <script type="text/javascript" async="" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/ga.js"></script><script src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/cb=gapi.loaded_1" async=""></script><script src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/cb=gapi.loaded_0" async=""></script><script src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/ca-pub-6596919741211198.js"></script><script type="text/javascript" async="" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/plusone.js" gapi_processed="true"></script><script id="facebook-jssdk" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/all.js"></script><script language="JavaScript" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/bookmark.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.___gcfg = {
+        lang: 'ru-RU',
+        parsetags: 'onload'
+        };
+        (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./Практическое применение техник тест дизайна при разработке тест кейсов_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/main_ru.js"></script><script type="text/javascript" charset="UTF-8" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/element_main.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body style="position: relative; min-height: 100%; top: 0px;">
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/xd_arbiter.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/xd_arbiter(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<div id="container">
+<div id="sitename">
+    <a name="top"></a>
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="left">
+        <tbody><tr>
+            <td align="left" valign="top">
+                <a href="http://www.protesting.ru/" title="Про Тестинг"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/protesting_logo.png" alt="Про Тестинг: обеспечение качества, тестирование, автоматизация" border="0"></a>
+            </td>
+            <td align="right" valign="middle">
+                <noindex>
+                    <script async="" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="pub-6596919741211198" data-ad-slot="6694292302" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </noindex>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div id="mainmenu">
+    <ul>
+        <li><a href="http://protesting.ru/">Главная</a></li>
+        <li><a href="http://protesting.ru/qa/">Обеспечение&nbsp;Качества</a></li>
+        <li><a class="current" href="http://protesting.ru/testing/">Тестирование</a></li>
+        <li><a href="http://protesting.ru/automation/">Автоматизация</a></li>
+        <li><a href="http://protesting.ru/service/">Сервис&nbsp;и&nbsp;Услуги</a></li>
+        <li><a href="http://protesting.ru/contact/">Контакт</a></li>
+        <li><a href="http://protesting.ru/news/">Новости</a></li>
+    </ul>
+</div>
+<div id="followme">
+    <ul>
+        <li><a rel="external nofollow" target="_blank" href="http://twitter.com/ProTesting_RU"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/twitter_1.png" width="36" height="36" title="Следовать за нами в twitter" alt="Twitter" border="0"></a></li>
+        <li><a rel="external nofollow" target="_blank" href="http://pro-testing.blogspot.com/feeds/posts/default"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/rss_1.png" width="36" height="36" title="RSS Atom feed" alt="Atom" border="0"></a></li>
+        <li><a rel="external nofollow" target="_blank" href="http://pro-testing.blogspot.com/"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/blogger_1.png" width="36" height="36" title="Наш блог" alt="Blog" border="0"></a></li>
+    </ul>
+    <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1458242469599" name="I0_1458242469599" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+    <div class="fb-like fb_iframe_widget" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=148&amp;href=http%3A%2F%2Fprotesting.ru%2Ftesting%2Ftestdesign_practice.html&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 78px; height: 20px;"><iframe name="f3249c1ad0e324" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/like.html" style="border: none; visibility: visible; width: 78px; height: 20px;" class=""></iframe></span></div>
+</div>
+<div id="wrap">
+<div id="leftside">
+    <h1>Тестирование</h1>
+    <p>
+        <a class="nav" href="http://protesting.ru/testing/">Основные понятия</a>
+        <a class="nav" href="http://protesting.ru/testing/testtypes.html">Виды Тестирования</a>
+        <a class="nav" href="http://protesting.ru/testing/testlevels.html">Уровни Тестирования</a>
+        <a class="nav" href="http://protesting.ru/testing/testdeliverables.html">Тестовые Артефакты</a>
+        <a class="nav" href="http://protesting.ru/testing/testdesign.html">Тест Дизайн</a>
+        <a class="nav sub" href="http://protesting.ru/testing/testcoverage.html">Тестовое покрытие</a>
+        <a class="nav sub" href="http://protesting.ru/testing/testdesign_technics.html">Техники тест дизайна</a>
+        <a class="nav sub active" href="http://protesting.ru/testing/testdesign_practice.html">Практическое применение тест дизайна</a>
+        <a class="nav" href="http://protesting.ru/testing/testprocess.html">Процесс тестирования</a>
+        <a class="nav" href="http://protesting.ru/testing/conditions.html">Условия проведения</a>
+    </p>
+</div>
+<div id="rightside">
+    <noindex>
+        <script async="" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/adsbygoogle.js"></script>
+        <!-- Большой вертикаль - 160x600 -->
+        <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6596919741211198" data-ad-slot="9317658806" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </noindex>
+</div>
+<div id="searchpanel">
+    <form action="http://www.protesting.ru/searchresult.html" id="cse-search-box">
+        <input type="hidden" name="cx" value="partner-pub-6596919741211198:2p1g8mczggq">
+        <input type="hidden" name="cof" value="FORID:10">
+        <input type="hidden" name="ie" value="UTF-8">
+        <input class="searchbox" type="text" name="q" size="50" onblur="if (q.value == &#39;&#39;) {q.style.background = &#39;#FFFFFF url(http://www.protesting.ru/img/search-logo.PNG) left no-repeat&#39;;}" onfocus="q.style.background = &#39;#ffffff&#39;; ">
+        <input class="searchbutton" type="submit" name="sa" value="Поиск">
+    </form>
+</div>
+<div id="content">
+<div id="bookmark">
+    <div id="addBookmarkContainer"><a id="bookmarkLink" href="http://protesting.ru/testing/testdesign_practice.html" title="Про Тестинг - Тестирование - Практическое применение техник тест дизайна при разработке тест кейсов">&nbsp;►&nbsp;в&nbsp;закладки&nbsp;&nbsp;</a></div>
+</div>
+<p class="broadcast">Раздел: <a href="http://protesting.ru/testing/">Тестирование</a>&nbsp;&gt; <a href="http://protesting.ru/testing/testdesign.html">Тест дизайн</a>&nbsp;&gt; Практическое применение техник тест дизайна при разработке тест кейсов</p>
+<h1>Практическое применение техник тест дизайна при разработке тест кейсов</h1>
+<p>Многие знают что такое тест дизайн, но не все умеют его применять. Чтобы немного прояснить ситуацию, мы решили предложить Вашему вниманию последовательный подход к разработке <a href="http://protesting.ru/testing/testcase.html">тестовых случаев (тест кейсов)</a>, используя самые простейшие <a href="http://protesting.ru/testing/testdesign_technics.html">техники тест дизайна:</a></p>
+<ul>
+    <li><b>Эквивалентное Разделение (Equivalence Partitioning)</b>, далее в тексте - <b>EP</b></li>
+    <li><b>Анализ Граничных Значений (Boundary Value Analysis)</b>, далее в тексте - <b>BVA</b></li>
+    <li><b>Предугадывание ошибки (Error Guessing)</b>, далее в тексте - <b>EG</b></li>
+    <li><b>Причина / Следствие (Cause/Effect)</b>, далее в тексте - <b>CE</b></li>
+</ul>
+<p><b>План разработки тест кейсов</b> предлагается следующий:</p>
+<ol>
+    <li>Анализ требований.</li>
+    <li>Определение набора тестовых данных на основании <b>EP</b>, <b>BVA</b>, <b>EG</b>.</li>
+    <li>Разработка шаблона теста на основании <b>CE.</b></li>
+    <li>Написание тест кейсов на основании первоначальных требований, тестовых данных и шагов теста.</li>
+</ol>
+<p>Далее на примере, рассмотрим предложенный подход.</p>
+<br>
+<p><b>Пример:</b> </p>
+<p>Протестировать функциональность формы приема заявок, требования к которой предоставлены в следующей таблице:</p>
+<br>
+<table cellpadding="5" cellspacing="0" border="1">
+    <tbody>
+    <tr>
+        <th>
+            <p>Элемент</p>
+        </th>
+        <th>
+            <p>Тип элемента</p>
+        </th>
+        <th>
+            <p>Требования</p>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <p>Тип обращения</p>
+        </td>
+        <td>
+            <p>combobox</p>
+        </td>
+        <td>
+            <p>Набор данных:</p>
+            <ol>
+                <li>Консультация</li>
+                <li>Проведение тестирования</li>
+                <li>Размещение рекламы</li>
+                <li>Ошибка на сайте</li>
+            </ol>
+            <p><b>*</b> - на процесс выполнения операции приема заявок не влияет.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Контактное лицо</p>
+        </td>
+        <td>
+            <p>editbox</p>
+        </td>
+        <td>
+            <p>1. Обязательное для заполнения</p>
+            <p>2. Максимально 25 символов</p>
+            <p>3. Использование цифр и спец символов не допускается</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Контактный телефон</p>
+        </td>
+        <td>
+            <p>editbox</p>
+        </td>
+        <td>
+            <ol>
+                <li>Обязательное для заполнения</li>
+                <li>Допустимые символы "+" и цифры</li>
+                <li>"+" можно использовать только в начале номера</li>
+                <li><p>Допустимые форматы:</p>
+                    <ul>
+                        <li>начинается с плюса - 11-15 цифр<br>
+                            +31612361264<br>
+                            +375291438884<br></li>
+                        <li>без плюса - 5-10 цифр, например:<br>
+                            0613261264<br>
+                            2925167</li>
+                    </ul>
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Сообщение</p>
+        </td>
+        <td>
+            <p>text area</p>
+        </td>
+        <td>
+            <p>1. Обязательное для заполнения</p>
+            <p>2. Максимальная длина 1024 символа</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Отправить</p>
+        </td>
+        <td>
+            <p>button</p>
+        </td>
+        <td>
+            <p>Состояние:</p>
+            <p>1. По умолчанию - не активна&nbsp;(Disabled)</p>
+            <p>2. После заполнения обязательных полей становится активна&nbsp;(Enabled)</p>
+            <p>&nbsp;</p>
+            <p>Действия после нажатия</p>
+            <p>1. Если введенные данные корректны - отправка сообщения</p>
+            <p>2. Если введенные данные НЕ корректны - валидационное сообщение</p>
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<p>Вариант использования (<i>иногда его может и не быть</i>):</p>
+<p><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/usecase.png" alt="Use Case: пример варианта использования" title="Пример варианта использования" width="30%"></p>
+<br>
+<h2>1. Анализ требований&nbsp;</h2>
+<p>Читаем, анализируем требования и выделяем для себя следующие нюансы:</p>
+<ul><li>какие из полей обязательные для заполнения?</li>
+    <li>имеют ли поля ограничения по длине или по размерности (границы)?</li>
+    <li>какие из полей имеют специальные форматы?</li>
+</ul>
+<br>
+<h2>2.Определение набора тестовых данных</h2>
+<p>Отталкиваясь от требований к полям, используя техники тест дизайна начинаем определение набора тестовых данных:</p>
+<ul><li>в зависимости от того обязательное поле или нет, определим какие поля необходимо проверить на пустое значение, так как оно может вызывать ошибку (В результирующей таблице&nbsp;<b><font class="orange" color="ff9900">оранжевый</font></b> цвет)</li>
+    <li>т.к. исчерпывающее тестирование не представляется возможным <i>из-за огромного числа всевозможных комбинаций значений</i>, в первую очередь необходимо определить <b>минимальный набор данных</b>. Это можно сделать используя такие <b>техники</b>, как <b>EP</b> и <b>BVA</b>. (В результирующей таблице <b><font class="blue" color="6fa8dc">голубой</font></b> цвет)</li>
+    <li>На форме присутствует поле, имеющее составной тип (цифры используются совместно с символами), обладает специальным форматом данных и поэтому выделение тестовых данных для него - это достаточно трудоемкая задача. <i>В пределах данной статьи ограничимся только простой проверкой форматов и основных требований описанных в форме приема  заявок</i>. </li>
+    <li>По завершению генерации данных используя стандартные техники, можно добавить некоторое количество значений на основании личного опыта (<b>техника EG</b>) - это будет использование спец. символов, очень длинных строк, разных форматов данных, регистров в строках (Upper, Lowwer, Mixed cases), отрицательные и нулевые значения, кейворды Null - NaN - Infinity и т.д. Сюда можно включить все, что вы полагаете может вывести приложение из строя  (В результирующей таблице <b><font class="violet" color="9900ff">фиолетовый</font></b> цвет)</li>
+</ul>
+<p><b>Примечание:</b></p>
+<p>Отметим, что количество тестовых данных после окончательной генерации будет достаточно большим, даже при использовании специальных техник тест дизайна. Поэтому ограничимся лишь несколькими значениями для каждого поля, так как цель данной статьи показать именно <b>процесс создания тест кейсов</b>, а не процесс получения конкретных тестовых данных.</p>
+<h3>2.1 Выбор тестовых данных для каждого отдельно взятого поля</h3>
+<ul>
+    <li>Поле <b>Тип обращения</b>. Так как все данные входят в 1 класс эквивалентности, то есть не изменяют сам процесс выполнения приема заявки, берем любою (1-ю) позицию в листе с ожидаемым результатом ОК. Но т.к. реализовано поле как лист, имеет также смысл рассмотреть и граничные условия (техника BVA), т.е. берем первый и последний элементы. Итого: 1-я и последняя позиции в листе. Ожидаемый результат при использовании - ОК. </li>
+    <li>Поле <b>Контактное лицо</b>. Это обязательное поле размером от 1 до 25 символов (включая границы). Проверка на обязательность добавляет к тестовым данным пустое значение. Проведем анализ граничных условий (BVA), получим набор: 0, 1, 2, 24, 25 и 26 символов. Пустое значение (0 символов) уже было добавлено при анализе обязательности поля для ввода, поэтому при BVA мы не будем добавлять его еще раз. (если его добавить второй раз, произойдет дублирование тестовых данных, которое не приведет к нахождению новых дефектов, а значит повторное добавление в домен не имеет смысла). В связи с тем, что значения 2 и 24 символа являются, с нашей точки зрения, некритичными, их можно не добавлять. В итоге получаем, что минимальный набор данных для тестирования поля - это строки 1 и 25 - ОК, и 0 (пустое значение), 26 символов - NOK. </li>
+    <li><p>поле <b>Контактный телефон</b> состоит из нескольких частей: код страны, код оператора, номер телефон (который может быть составной и разделенный дефисами). Для определения правильного набора тестовых данных необходимо рассматривать каждую составную часть по-отдельности. Применяя BVA и EP, получим:</p>
+        <ul>
+            <li><b>для номеров с плюсом</b><br>
+                По BVA получим номера с 10, 11, 12 и 14, 15, 16 цифрами, где 10 и 16 - NOK, а 11, 12, 14, 15 - OK<br>
+                Рассматривая полученные данные с позиции EP выделим, что 11, 12, 14, 15 входят в один класс эквивалентности. Поэтому при тестировании  мы можем использовать любое из них, но так как 11 и 15 - это границы интервала, то на наш взгляд их пропускать нельзя. Следовательно мы можем уменьшить набор значений до двух, исключив 12 и 14, а оставив 11 и 15 для проверки граничных условий.<br>
+                Итого имеем:<br>
+                11 и 15 цифр - OK, (+12345678901, +123456789012345)<br>
+                10 и 16 цифр - NOK; (+1234567890, +1234567890123456)
+            </li>
+            <li><b>для номеров без плюса:</b><br>
+                По BVA получим номера с 4, 5, 6 и 9, 10, 11 цифрами.<br>
+                Действуя аналогично примеру для номеров телефонов с плюсом, исключим значения  6 и 9, оставив 5 и 10.<br>
+                Итого имеем:<br>
+                5 и 10 цифр - OK, (12345, 1234567890)<br>
+                4 и 11 цифр - NOK;  (1234, 12345678901)
+            </li>
+        </ul>
+    </li>
+    <li>поле <b>Сообщение</b>. подбор данных проводим по аналогии с полем Контактное лицо. На выходе получаем значения: строки 1 и 1024 - ОК, и 1025 символов - NOK.</li>
+</ul>
+<p><b>Результирующая таблица данных, для использования при последующем составлении тест кейсов</b></p>
+<table cellpadding="5" cellspacing="0" border="1">
+<tbody>
+<tr>
+    <th>
+        <p>Поле</p>
+    </th>
+    <th>
+        <p>OK/NOK</p>
+    </th>
+    <th>
+        <p>Значение</p>
+    </th>
+    <th>
+        <p>Комментарий</p>
+    </th>
+</tr>
+<tr>
+    <td rowspan="3">
+        <p>Тип обращения</p>
+    </td>
+    <td rowspan="2">
+        <p>OK</p>
+    </td>
+    <td>
+        <p>Консультация</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">первый в списке</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>Ошибка на сайте</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">последний в списке</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>NOK</p>
+    </td>
+    <td>
+        <p>&nbsp;</p>
+    </td>
+    <td>
+        <p>&nbsp;</p>
+    </td>
+</tr>
+<tr>
+    <td rowspan="9">
+        <p>Контактное лицо</p>
+    </td>
+    <td rowspan="4">
+        <p>OK</p>
+    </td>
+    <td>
+        <p>йцукенгшщзйцукенгшщзйцуке</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">25 символов&nbsp;нижний регистр</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>a</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">1 символ</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>ЙЦУКЕНГШЩЗФЫВАПРОЛДЖЯЧСМИ</p>
+    </td>
+    <td>
+        <p><font class="violet" color="6fa8dc">25 символов&nbsp;ВЕРХНИЙ регистр</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>ЙЦУКЕНГШЩЗфывапролджЯЧСМИ</p>
+    </td>
+    <td>
+        <p><font class="violet" color="6fa8dc">25 символов&nbsp;СМеШаННыЙ регистр</font></p>
+    </td>
+</tr>
+<tr>
+    <td rowspan="5">
+        <p>NOK</p>
+    </td>
+    <td>
+        <p>&nbsp;</p>
+    </td>
+    <td>
+        <p><font class="orange" color="ff9900">пустое&nbsp;значение</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>йцукенгшщзйцукенгшщзйцукей</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">длина больше максимальной(26 символов</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>@#$%^&amp;;.?,&gt;|\/№"!()_{}[&lt;~</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">спец. символы (ASCII)</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>1234567890123456789012345</p>
+        <p>&nbsp;</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">только цифры</font></p>
+        <p>&nbsp;</p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>adsadasdasdas dasdasd asasdsads(...)sas</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">очень длинная строка (~1Mb)</font></p>
+    </td>
+</tr>
+<tr>
+    <td rowspan="13">
+        <p>Контактный телефон</p>
+    </td>
+    <td rowspan="4">
+        <p>OK</p>
+    </td>
+    <td>
+        <p>+12345678901</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">с плюсом - минимальная длина</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>+123456789012345</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">с плюсом - максимальная длина</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>12345</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">без плюса - минимальная длина</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>1234567890</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">без плюса - максимальная длина</font></p>
+    </td>
+</tr>
+<tr>
+    <td rowspan="9">
+        <p>NOK</p>
+    </td>
+    <td>
+        <p>&nbsp;</p>
+    </td>
+    <td>
+        <p><font class="orange" color="ff9900">пустое значение</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>+1234567890</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">с плюсом - &lt; минимальной длины</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>+1234567890123456</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">с плюсом - &gt; максимальной длины</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>1234</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">без плюса - &lt; минимальной длины</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>12345678901</p>
+    </td>
+    <td>
+        <p><font class="blue" color="ff00ff">без плюса - &gt; максимальной длины</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>+YYYXXXyyyxxzz</p>
+    </td>
+    <td>
+        <p><font class="violet" color="ff00ff">с плюсом - буквы вместо цифр</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>yyyxxxxzz</p>
+    </td>
+    <td>
+        <p><font class="violet" color="ff00ff">без плюса - буквы вместо цифр</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>+###-$$$-%^-&amp;^-&amp;!</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">спец. символы (ASCII)</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>1232312323123213231232(...)99</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">очень длинная строка (~1Mb)</font></p>
+    </td>
+</tr>
+<tr>
+    <td rowspan="5">
+        <p>Сообщение</p>
+        <p>&nbsp;</p>
+    </td>
+    <td rowspan="1">
+        <p>OK</p>
+    </td>
+    <td>
+        <p>йццуйцуйц(...)йцу</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">максимальная длина (1024 символа)</font></p>
+    </td>
+</tr>
+<tr>
+    <td rowspan="4">
+        <p>NOK</p>
+    </td>
+    <td>
+        <p>&nbsp;</p>
+    </td>
+    <td>
+        <p><font class="orange" color="ff9900">пустое значение</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>йццуйцуйц(...)йцуц</p>
+    </td>
+    <td>
+        <p><font class="blue" color="6fa8dc">длина больше максимальной (1025 символов)</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>adsadasdasdas dasdasd asasdsads(...)sas</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">очень длинная строка (~1Mb)</font></p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>@##$$$%^&amp;^&amp;</p>
+    </td>
+    <td>
+        <p><font class="violet" color="9900ff">только спец. символы (ASCII)</font></p>
+    </td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<h2>3. Разрабатываем шаблон теста</h2>
+<p>На основании <b>техники CE</b> и, по возможности, имеющихся вариантов использования (Use case) создадим шаблон планируемого теста. Данный документ будет представлять собой шаги и ожидаемые результаты теста, но без конкретных данных, которые подставляются на следующем этапе разработки тест кейсов.</p>
+<p>Пример шаблона тест кейса</p>
+<br>
+<table cellpadding="5" cellspacing="0" border="1">
+    <tbody>
+    <tr>
+        <th>
+            <p>Действие</p>
+        </th>
+        <th>
+            <p>Ожидаемый результат</p>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <p>1. Открываем форму отправки сообщения</p>
+        </td>
+        <td>
+            <ul>
+                <li>Форма открыта</li>
+                <li>Все поля по умолчанию пусты</li>
+                <li>Обязательные поля помечены - *</li>
+                <li>Кнопка "Отправить" не активна</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>2. Заполняем поля формы:</p>
+            <ul>
+                <li>Тип обращения</li>
+                <li>Контактное лицо</li>
+                <li>Контактный телефон</li>
+                <li>Сообщение</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Поля заполнены</li>
+                <li>Кнопка "Отправить" - активна (Enabled)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>3. Нажимаем кнопку "Отправить"</p>
+        </td>
+        <td>
+            <ul>
+                <li>Если введенные данные корректны -
+                    <ul>
+                        <li>Сообщение "Заявка отправлена"выведено на экран.</li>
+                        <li>Новая заявка появилась в списке на странице "Заявки".</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Если введенные данные НЕ корректны -;
+                    <ul>
+                        <li>Валидационное сообщение со всеми ошибками выведено на экран.</li>
+                        <li>Заявка НЕ появилась в списке на странице "Заявки".</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<h2>4. Написание тест кейсов на основании первоначальных требований, тестовых данных и шаблона теста</h2>
+<p>После того, как тестовые данные и шаги теста готовы приступаем непосредственно к разработке тест кейсов. Здесь нам помогут такие методы комбинирования как:</p>
+<ul>
+    <li><strong>Последовательный перебор</strong>. Представляет собой перебор всех возможных комбинаций имеющихся значений. Таким образом получается, что количество тест кейсов будет равно произведению количества вариантов тестовых данных для каждого поля. Для нашего конкретного примера мы получим <b>1170 тест кейсов</b>.</li>
+    <li><strong>Попарный перебор</strong> (<a target="_blank" href="http://www.pairwise.org/">Pairwise Testing</a>). Зачастую, сбои вызывают не сложное сочетание всех параметров, а сочетание лишь пары параметров. Техника <b>попарного перебора</b>, позволяет создать тестовые наборы, комбинирующие данные из двух полей. Благодаря этому, количество полученных на выходе тест кейсов в разы меньше, чем при комбинировании того же набора данных при <b>последовательном переборе</b>. Отметим также, что в данный момент существует несколько алгоритмов генерации комбинаций для попарного тестирования: <a target="_blank" href="http://www.dotnetspider.com/resources/24806-Orthogonal-Array-for-Testing.aspx">Orthogonal Arrays Testing</a>, <a target="_blank" href="http://www.mcdowella.demon.co.uk/allPairs.html">All pairs</a>, <a target="_blank" href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=731623">IPO (In-Parameter Order)</a>. Так например, при  использовании техники <b>All Pairs</b> в нашем конкретном случае мы получим всего <b>118 тест кейса</b>. (примеры сравнения эффективности разных алгоритмов генерации можно найти <a target="_blank" href="http://www.pairwise.org/tools.asp">здесь</a>)</li>
+</ul>
+<p>По завершению подготовки комбинаций данных, подставляем их в шаблон тест кейса, и в результате имеем набор тестовых случаев, покрывающий тестируемые нами требования к форме приема заявок.</p>
+<br>
+<p><b>Примечание</b>:</p>
+<p>Напоминаем, что тест кейсы разделяются по ожидаемому результату на <a href="http://protesting.ru/testing/testcase.html#tc_type"><strong>позитивные</strong> и <strong>негативные</strong> тест кейсы</a>.</p>
+<p>Пример <b>позитивного </b>тест кейса (все поля <b>OK</b>):</p>
+<br>
+<table cellpadding="5" cellspacing="0" border="1">
+    <tbody>
+    <tr>
+        <th>
+            <p>Действие</p>
+        </th>
+        <th>
+            <p>Ожидаемый результат</p>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <p>1. Открываем форму отправки сообщения</p>
+        </td>
+        <td>
+            <ul>
+                <li>Форма открыта</li>
+                <li>Все поля по умолчанию пусты</li>
+                <li>Обязательные поля помечены - *</li>
+                <li>Кнопка "Отправить" не активна</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>2. Заполняем поля формы:</p>
+            <ul>
+                <li>Тип обращения = Консультация</li>
+                <li>Контактное лицо = йцукенгшщзйцукенгшщзйцуке</li>
+                <li>Контактный телефон = +7-916-111-11-11</li>
+                <li>Сообщение</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Поля заполнены</li>
+                <li>Кнопка "Отправить" - активна (Enabled)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>3. Нажимаем кнопку "Отправить"</p>
+        </td>
+        <td>
+            <ul>
+                <li>Сообщение "Заявка отправлена"выведено на экран.</li>
+                <li>Новая заявка появилась в списке на странице "Заявки".</li>
+            </ul>
+            <br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<p>Пример&nbsp;<b>негативного </b>тест кейса (поле Контактное лицо - <b>NOK</b>):</p>
+<br>
+<table cellpadding="5" cellspacing="0" border="1">
+    <tbody>
+    <tr>
+        <th>
+            <p>Действие</p>
+        </th>
+        <th>
+            <p>Ожидаемый результат</p>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <p>1. Открываем форму отправки сообщения</p>
+        </td>
+        <td>
+            <ul>
+                <li>Форма открыта</li>
+                <li>Все поля по умолчанию пусты</li>
+                <li>Обязательные поля помечены - *</li>
+                <li>Кнопка "Отправить" не активна</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>2. Заполняем поля формы:</p>
+            <ul>
+                <li>Тип обращения = Консультация</li>
+                <li>Контактное лицо =&nbsp;@#$%^&amp;;.?,&gt;|\/№"!()_{}[&lt;~</li>
+                <li>Контактный телефон = (916)333-33-33</li>
+                <li>Сообщение = йццуйцуйц(...)йцу - 1024 символа</li>
+            </ul>
+        </td>
+        <td>
+            <ul><li>Поля заполнены</li>
+                <li>Кнопка "Отправить" - активна (Enabled)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>3. Нажимаем кнопку "Отправить"</p>
+        </td>
+        <td>
+            <ul>
+                <li>Валидационное сообщение со всеми ошибками выведено на экран:<br>
+                    "В поле "Контактное лицо" запрещено использование цифр и спец. символов." </li>
+                <li>Заявка НЕ появилась в списке на странице "Заявки".</li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<p><b>Авторы</b>: Алексей Булат, Владимир Антонов</p>
+<p class="linktop"><a href="http://protesting.ru/testing/testdesign_practice.html#top" rel="external nofollow">Наверх</a></p>
+</div>
+<div class="enddiv">&nbsp;
+    <noindex>
+        <script>
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'ru',
+            includedLanguages: 'be,en,fr,de,pl,ru,es,uk',
+            multilanguagePage: true,
+            gaTrack: true,
+            gaId: 'UA-4297293-3'
+            });
+            }
+        </script><script src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/element.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-4297293-3']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </noindex>
+</div>
+</div>
+</div>
+<div id="footer">
+    <table border="0" cellpadding="0" cellspacing="0" align="center">
+        <tbody><tr>
+            <td align="left">
+                <table class="inner" border="0" cellpadding="0" cellspacing="0" align="left">
+                    <tbody><tr><td align="left"><b>ОБРАТНАЯ СВЯЗЬ:</b></td></tr>
+                    <tr><td align="left">&nbsp;</td></tr>
+                    <tr><td align="left"><a href="http://protesting.ru/contact/contact.html">Задать вопрос</a></td></tr>
+                    <tr><td align="left"><a href="http://protesting.ru/contact/contact.html">Сообщить об ошибке</a></td></tr>
+                    <tr><td align="left"><a href="http://protesting.ru/contact/contact.html">Публикация материалов</a></td></tr>
+                    <tr><td align="left"><a href="http://protesting.ru/contact/link.html">Обмен ссылками</a></td></tr>
+                </tbody></table>
+            </td>
+            <td align="center"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/protesting125x125_3.gif" alt="Про Тестинг: тесты, тестирование и тестировщики программного обеспечения" width="100" height="100">
+                <br>
+                <noindex>
+                    <script type="text/javascript">
+                        var d = new Date();
+                        document.write("&copy; 2008-" + d.getFullYear());
+                    </script>© 2008-2016
+                </noindex>
+                <a href="http://www.protesting.ru/">ProTesting.ru</a></td>
+            <td align="right">
+                <table class="inner" border="0" cellpadding="0" cellspacing="0" align="right">
+                    <tbody><tr><td align="right"><b>УСЛУГИ:</b></td></tr>
+                    <tr><td align="right">&nbsp;</td></tr>
+                    <tr><td align="right"><a href="http://protesting.ru/service/documentation.html">Подготовка&nbsp;документации</a></td></tr>
+                    <tr><td align="right"><a href="http://protesting.ru/service/testing.html">Тестирование&nbsp;ПО</a></td></tr>
+                    <tr><td align="right"><a href="http://protesting.ru/service/consulting.html">Консалтинг</a></td></tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+    <p align="left">
+        <!--LiveInternet counter--><script type="text/javascript"><!--
+    document.write("<a href='http://www.liveinternet.ru/click' "+
+                   "target=_blank><img src='http://counter.yadro.ru/hit?t17.5;r"+
+                   escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                                              ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                                                                                       screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                   ";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+                   "' alt='' title='LiveInternet: показано число просмотров за 24"+
+                   " часа, посетителей за 24 часа и за сегодня' "+
+                   "border=0 width=88 height=31 align=middle/><\/a>")//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/hit" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" width="88" height="31" align="middle/"></a><!--/LiveInternet-->
+    </p>
+    <!-- begin of Top100 logo -->
+    <a href="http://top100.rambler.ru/home?id=1902383" target="_blank"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/banner-88x31-rambler-black2.gif" alt="Rambler&#39;s Top100" width="88" height="31" border="0"></a>
+    <!-- end of Top100 logo -->
+</div>
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/top100.jcn"></script><noscript>&lt;img src="http://counter.rambler.ru/top100.cnt?1902383" alt="" width="1" height="1" border="0"/&gt;</noscript>
+<!-- end of Top100 code -->
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/translate_24dp.png" width="20" height="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Исходный текст</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Предложить лучший вариант перевода</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><iframe name="oauth2relay909018753" id="oauth2relay909018753" src="./Практическое применение техник тест дизайна при разработке тест кейсов_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

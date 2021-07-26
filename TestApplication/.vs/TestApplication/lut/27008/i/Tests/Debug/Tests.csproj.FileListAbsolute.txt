@@ -1,0 +1,6 @@
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\Tests\bin\Debug\Tests.dll
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\b\Tests\bin\Debug\Tests.pdb
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\Tests\Debug\Tests.csproj.CoreCompileInputs.cache
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\Tests\Debug\Tests.csproj.CopyComplete
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\Tests\Debug\Tests.dll
+G:\9-10\TestApplication\.vs\TestApplication\lut\0\i\Tests\Debug\Tests.pdb
